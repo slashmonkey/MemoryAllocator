@@ -46,7 +46,7 @@ public:
 		m_freelist = node;
 	}
 
-	void printMemoryMap() const
+	void printStats() const
 	{
 		std::cout << "PoolAllocator: Memory Map Size: " << m_poolSize << std::endl;
 		std::cout << "PoolAllocator: Memory Map Block Size: " << BlockSize << std::endl;

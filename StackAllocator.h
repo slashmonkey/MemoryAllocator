@@ -17,7 +17,7 @@ public:
 
 	void reset();
 
-	void printMemoryMap() const;
+	void printStats() const;
 
 private:
 	struct AllocationHeader

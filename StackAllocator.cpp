@@ -12,12 +12,12 @@ StackAllocator::~StackAllocator()
 	delete[] m_start;
 }
 
-//layout after
+// memory layout
 //						  offset
 //						 ↓		(next allocation)
 // padding| header | data|(padding| header | data)
-//				   ↑
-//				   aligned
+// ↑	  ↑		   ↑
+// offset + padding + header (aligned)
 void* StackAllocator::allocate(std::size_t size, std::size_t alignment)
 {
 	if (size == 0) return nullptr;
@@ -67,7 +67,7 @@ void StackAllocator::reset()
 	m_offset = 0;
 }
 
-void StackAllocator::printMemoryMap() const
+void StackAllocator::printStats() const
 {
 	std::cout << "Stack: " << m_offset << "/" << m_size
 			<< " bytes used (" << (100.0 * m_offset / m_size) << "%)\n";

@@ -9,4 +9,6 @@ add_executable(MemoryAllocator main.cpp
         StackAllocator.cpp
         StackAllocator.h
         PoolAllocator.h
+        FreeListAllocator.cpp
+        FreeListAllocator.h
 )
