@@ -1,10 +1,10 @@
-Memory Allocators
+Memory allocators for learning purpose.
 
-Implemented:
+**Implemented:**
 * Linear Allocator
 * Stack Allocator
 * Pool Allocator
-
-ToDo:
 * Freelist Allocator
-* Slab Allocator
+
+**References:**
+https://www.gingerbill.org/series/memory-allocation-strategies/
